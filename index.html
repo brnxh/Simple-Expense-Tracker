@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    
+    <style>
+        table
+        {
+            border-collapse: collapse;
+        }
+        th, td
+        {
+            border:1px solid red;
+            
+        }
+    </style>
+<body>
+    <div class="main">
+        <h1>Expense Tracker</h1>
+        <h3>Add a new item:</h3>
+
+        <label for="name">
+            Name:
+        </label>
+        <input type="text" name="name" id="fname" placeholder="Where was the expense made?">
+
+        <label for="date">
+            Date:
+        </label>
+        <input type="date" name="date" id="dates">
+
+        <label for="amount">
+            Amount:
+        </label>
+        <input type="text" name="amount" id="amt">
+
+        <input type="button" id="submit" value="Add Expense">
+
+
+        <div class="table">
+
+            <table id="view">
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <!-- <td colspan="4">No expense added yet!</td> -->
+                    
+                </tr>
+            </table>
+        </div>
+        
+        
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
