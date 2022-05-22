@@ -1,35 +1,33 @@
-let submit = document.getElementById('submit');
-submit.addEventListener('click', showExpense);
+const formEl = document.querySelector("form");
+const tbodyEl = document.querySelector("tbody");
+const tableEl = document.querySelector("table");
 
-let row = 1;
+function addExpense(e)
+{
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const date = document.getElementById("dates").value;
+    const amount = document.getElementById("amt").value;
+    tbodyEl.innerHTML += `
+    <tr>
+        <td>${name}</td>
+        <td>${date}</td>
+        <td>${amount}</td>
+        <td><button class = "closeBtn">x</button></td>
+    </tr>
+    `;
 
-function showExpense(){
-    let name = document.getElementById('fname');
-    let date = document.getElementById('dates');
-    let amount = document.getElementById('amt');
-
-    let view = document.getElementById('view')
-
-    let newRow = view.insertRow(row);
-
-    let cell1 = newRow.insertCell(0);
-    let cell2 = newRow.insertCell(1);
-    let cell3 = newRow.insertCell(2);
-
-    let btn = document.createElement('button');
-    btn.innerText = 'x';
-    // btn.type = "button";
-    // btn.className = "btn";
-
-
-    // let cell4 = newRow.insertCell(3);
-
-    cell1.innerHTML = fname.value;
-    cell2.innerHTML = dates.value;
-    cell3.innerHTML = amt.value;
-    cell4.appendChild(btn);
-    // cell4.innerHTML = btn.value;
-
-    row++;
-    
 }
+
+function closeRow(e)
+{
+    if(!e.target.classList.contains("closeBtn")){
+        return;
+    }
+
+    const btn = e.target;
+    btn.closest("tr").remove();
+}
+
+formEl.addEventListener("submit", addExpense);
+tableEl.addEventListener("click", closeRow);
