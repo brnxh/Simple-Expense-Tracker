@@ -5,17 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
     
     <style>
-        table
-        {
-            border-collapse: collapse;
-        }
-        th, td
-        {
-            border:1px solid red;
-            
-        }
+        
     </style>
 <body>
     <form>
@@ -25,12 +18,10 @@
 
         <label for="name">Name: </label>
         <input type="text" name="name" id="name" placeholder="Where was the expense made?">
-    </div>
     
         <label for="date">Date: </label>
         <input type="date" name="date" id="dates">
-    </div>
-    <div class="main">
+
         <label for="amount">Amount: </label>
         <input type="text" name="amount" id="amt">
 
@@ -40,7 +31,7 @@
 
         <div class="table">
 
-            <table>
+            <table id = "list">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -49,7 +40,12 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    <tr>
+                        <!-- <td id = "msg" colspan="4"></td>  -->
+                        <!-- <td colspan = "4";></td> -->
+                    </tr>
+                </tbody>
                 
             </table>
         </div>

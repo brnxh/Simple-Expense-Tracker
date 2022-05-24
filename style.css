@@ -1,0 +1,102 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background: #585858;
+    font-family: "Neue Helvetica";
+    color: #fff;
+}
+.input-row
+{
+    padding: 15px;
+    margin: 50px auto;
+    text-align: center;
+    /* border: 1px solid rgb(255, 255, 255); */
+    width: 50%;
+}
+
+.input-row h1
+{
+    font-size: 2.5em;
+    line-height: 40px;
+}
+
+.input-row h3
+{
+    font-size: 1.5em;
+    line-height: 50px;
+    
+}
+
+
+input[type=text]
+{
+    width: 90%;
+    padding: 10px 20px;
+}
+
+input[type=date]
+{
+    width: 30%;
+    padding: 10px 20px;
+}
+
+#amt
+{
+    width: 50%;
+    margin: 5px;
+}
+
+button
+{
+
+    padding: 15px 15px;
+    color: #fff;
+    background: rgb(1, 144, 1);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover
+{
+    color: rgb(1, 144, 1);
+    background: #fff;
+}
+
+
+table
+{
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 50%;
+
+}
+
+.list
+{
+    text-align: left;
+    background-color: #081362;
+    color: white;
+}
+th, td
+{
+    border:1px solid rgb(209, 162, 162);
+    padding: 10px; 
+    text-align: left;      
+}
+
+table td:empty::before
+{
+    content: "No expense added yet";
+    color: #fff;
+}
+
+.closeBtn
+{
+    padding: 3px 5px;
+    background: red;
+}
